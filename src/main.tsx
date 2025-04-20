@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM, { Container } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import App from "./App";
-import Gallery from './Gallery'
-import './index.css'
+import Gallery from "./Gallery";
+import "./index.css";
 
 const root = document.getElementById("root");
 
-ReactDOM.createRoot(root).render(
+ReactDOM.createRoot(root as Container).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
