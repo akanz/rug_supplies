@@ -1,10 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router";
+import App from "./App";
+import Gallery from './Gallery'
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/products" element={<Gallery />} />
+    </Routes>
+  </BrowserRouter>
 );

@@ -12,7 +12,6 @@ import {
   Twitter,
   Calendar,
 } from "lucide-react";
-import { useNavigate } from "react-router";
 import Img1 from "./assets/img/rug1.jpg";
 import Img2 from "./assets/img/rug2.jpg";
 import Img3 from "./assets/img/rug3.jpg";
@@ -20,9 +19,8 @@ import Img4 from "./assets/img/rug4.jpg";
 import Img5 from "./assets/img/rug5.jpg";
 import Img6 from "./assets/img/rug6.jpg";
 
-export default function App() {
+export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -274,10 +272,7 @@ export default function App() {
 
         {/* Products Section */}
         <section id="products" className="py-16 md:py-24 bg-white">
-          
-          <div onClick={()=> {
-            navigate('/products')
-          }} className="container mx-auto px-4">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Our Products
